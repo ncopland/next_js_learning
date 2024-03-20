@@ -1,0 +1,130 @@
+@tailwind base; {/* Import Tailwind's base styles */}
+@tailwind components; {/* Import Tailwind's component styles */}
+@tailwind utilities; {/* Import Tailwind's utility classes */}
+
+:root {
+  --foreground-rgb: 0, 0, 0; /* Defines black as the default text color */
+  --background-start-rgb: 0, 0, 0; /* Light grey background start for a gradient */
+  --background-end-rgb: 255, 255, 255; /* White background end for a gradient */
+}
+
+/* General button formatting */
+.globalButton {
+  display: flex; /* Uses flex layout for alignment */
+  padding: 8px 20px; /* Sets the padding around the button to 8 pixels on top/bottom and 20 pixels on either side*/
+  background: blue; /* Sets the background color to blue */
+  color: white; /* Sets the text color to white */
+  text-decoration: none; /* Removes underline from links */
+  border-radius: 5px; /* Rounds the corners of the button */
+  text-align: center; /* Centers the text horizontally */
+  cursor: pointer; /* Switches the cursor to a pointer when hovering */
+  margin-right: 20px; /* Adds space to the right of the button */
+}
+
+/* Creates a class for buttons that sit on the far left of the screen */
+.globalFarLeftButton {
+  display: flex; /* Uses flex layout for alignment */
+  padding: 8px 20px; /* Sets the padding around the button to 8 pixels on top/bottom and 20 pixels on either side */
+  background: blue; /* Sets the background color to blue */
+  color: white; /* Sets the text color to white */
+  text-decoration: none; /* Removes underline from links */
+  border-radius: 5px; /* Rounds the corners of the button */
+  text-align: center; /* Centers the text horizontally */
+  cursor: pointer; /* Switches the cursor to a pointer when hovering */
+  margin-right: 20px; /* Adds space to the right of the button */
+}
+
+/* Creates a class for buttons that sit on the far right of the screen */
+.globalFarRightButton {
+  display: flex; /* Uses flex layout for alignment */
+  padding: 8px 20px; /* Sets the padding around the button to 8 pixels on top/bottom and 20 pixels on either side */
+  background: blue; /* Sets the background color to blue */
+  color: white; /* Sets the text color to white */
+  text-decoration: none; /* Removes underline from links */
+  border-radius: 5px; /* Rounds the corners of the button */
+  text-align: center; /* Centers the text horizontally */
+  cursor: pointer; /* Switches the cursor to a pointer when hovering */
+  /* Applies margin to the right unless it's the last button */
+  &:not(:last-child) {
+    margin-right: 20px; /* Adds space to the right if not the last button */
+  }
+}
+
+/* Creates a class for buttons on the far right of the screen */
+.buttonsRightContainer {
+  margin-left: auto; /* Semds the container to the right side */
+  margin-right: 20px; /* Adds spacing to the right */
+  display: flex; /* Uses flex layout for horizontal alignment */
+}
+
+/* Creates a class for buttons that are larger and green */
+.globalPracticeButton {
+  display: inline-block; /* Uses inline-block for layout */
+  height: 100px; /* Sets the height */
+  line-height: 100px; /* Vertically centers text */
+  padding: 0 100px; /* Horizontal padding */
+  background: green; /* Sets background color to green */
+  color: white; /* Sets text color to white */
+  border-radius: 10px; /* Rounds the corners more than the .globalButton */
+  text-align: center; /* Centers the text horizontally */
+  cursor: pointer; /* Changes the cursor on hover */
+}
+
+/* Creates a class for containers that are centered and have their contents centered */
+.container { 
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Horizontally centers children */
+  align-items: center; /* Vertically centers children */
+  margin: auto auto 0; /* Centers container with auto margins and no top margin */
+  padding: 8px; /* Adds padding inside the container */
+}
+
+/* Creates a class for text to be used on the home page */
+.home {
+ font-size: 34px; /* Larger font size */
+ margin-left: 10px; /* Left margin */
+ margin-right: 20px; /* Right margin */
+ padding: 8px; /* Padding around the text */
+ color: blue; /* Text color */
+ font-weight: 900; /* Bold text */
+ font-style: italic; /* Italic text */
+}
+
+/* Creates a class for a header text */
+.h1 {
+  text-align: center; /* Centers text horizontally */
+  font-size: 20px; /* Font size */
+  margin-left: 10px; /* Left margin */
+  margin-right: 20px; /* Right margin */
+  padding: 8px; /* Padding around the text */
+  color: black; /* Text color */
+  font-style: italic; /* Italic text */
+}
+
+/* Creates a class for a navigation bar that will be used for all pages */
+.navbar{
+  width: 100vw; /* Full viewport width */
+  background-color: lightskyblue; /* Light blue background */
+  display: flex; /* Flex layout for child elements */
+  align-items: center; /* Centers children vertically */
+  border-bottom: 10px solid blue; /* Solid blue border at the bottom */
+}
+
+/* Creates class to center text */
+.center {
+  text-align: center; /* Centers text horizontally */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255; /* White text color in dark mode */
+    --background-start-rgb: 0, 0, 0; /* Black background start for gradient in dark mode */
+    --background-end-rgb: 0, 0, 0; /* Black background end for gradient in dark mode */
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
